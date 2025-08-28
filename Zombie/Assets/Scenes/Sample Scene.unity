@@ -605,7 +605,7 @@ MonoBehaviour:
   ammoText: {fileID: 1213315955}
   scoreText: {fileID: 651537046}
   waveText: {fileID: 392300037}
-  gameOverUI: {fileID: 362774338}
+  gameOverUi: {fileID: 362774338}
 --- !u!1 &737390710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1784282725167592, guid: 13259943c4d634186ac994d570bb3253,
@@ -906,10 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71352ffd53f49e4887a12fa9594d654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
-  ammoText: {fileID: 0}
-  score: {fileID: 0}
-  gun: {fileID: 0}
+  uiManager: {fileID: 722130722}
 --- !u!4 &1216340731
 Transform:
   m_ObjectHideFlags: 0
@@ -1077,6 +1074,7 @@ MonoBehaviour:
   maxItemCount: 10
   itemSpawnTime: 0
   itemSpawnDelay: 10
+  manager: {fileID: 0}
 --- !u!4 &1405865447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2471733686169813095, guid: d89e087fca818c6429e9f531d04d541b,
@@ -1658,6 +1656,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a55f8809f52258344978ba6914416e64,
         type: 2}
+    - target: {fileID: 856861275562163128, guid: 13259943c4d634186ac994d570bb3253,
+        type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 722130722}
     - target: {fileID: 1123323500731824260, guid: 13259943c4d634186ac994d570bb3253,
         type: 3}
       propertyPath: m_Layer
