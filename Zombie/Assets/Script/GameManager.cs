@@ -1,28 +1,35 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public UIManager uiManager;
+    private int score;
+
     public bool IsGameOver { get; private set; }
 
-    public GameObject gameOverUI;
-    public Text ammoText;
-    public Text score;
-    public Gun gun;
-
-    public void Awake()
+    public void Start()
     {
-        gameOverUI.SetActive(false);
+        var findGo = GameObject.FindWithTag("Player");
+        var playerHealth = findGo.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            //playerHealth.onDeath += EndGame;
+        }
     }
 
-    private void Update()
+    public void AddScore(int add)
     {
-        ammoText.text = gun.magAmmo + "/" + gun.ammoRemain;
+        score += add;
+        uiManager.SetUpdateScore(score);
     }
 
-    public void OnPlayerDead()
+    public void EndGame()
     {
         IsGameOver = true;
-        gameOverUI.SetActive(true);
+        uiManager.GameOverUpdate(true);
     }
+
 }
+
+
+

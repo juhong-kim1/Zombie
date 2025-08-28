@@ -66,7 +66,7 @@ public class PlayerHealth : LivingEntity
 
         movement.enabled = false;
         shooter.enabled = false;
-        gameManager.OnPlayerDead();
+        //gameManager.OnPlayerDead();
     }
 
     public void Heal(int amount)

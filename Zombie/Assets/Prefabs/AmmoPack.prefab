@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 135053304893941300}
   - component: {fileID: 1873919466344125764}
   - component: {fileID: 6324147107012862371}
+  - component: {fileID: -8787904232223758750}
   m_Layer: 0
   m_Name: AmmoPack
   m_TagString: Untagged
@@ -144,6 +145,20 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &-8787904232223758750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045172808418600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead2867b8c98b924c868ea7d37dce710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 1
+  value: 10
 --- !u!1 &1496639653374222
 GameObject:
   m_ObjectHideFlags: 0

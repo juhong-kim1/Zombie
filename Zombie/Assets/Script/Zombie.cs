@@ -63,6 +63,10 @@ public class Zombie : LivingEntity
     public float lastAttackTime;
     public float attackInterval = 0.5f;
 
+    public Renderer zombieRenderer;
+
+    //public ZombieData data;
+
 
     private void Awake()
     {
@@ -70,6 +74,8 @@ public class Zombie : LivingEntity
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
         audioSource = GetComponent<AudioSource>();
+
+       //SetUp(data);
     }
 
     protected override void OnEnable()
@@ -78,6 +84,15 @@ public class Zombie : LivingEntity
 
         collider.enabled = true;
         CurrentStatus = Status.Idle;
+    }
+
+    public void SetUp(ZombieData data)
+    {
+        MaxHealth  = data.maxHP;
+        damage = data.damage;
+        agent.speed = data.speed;
+
+        zombieRenderer.material.color = data.skiColor;
     }
 
     private void Update()

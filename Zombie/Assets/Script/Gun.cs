@@ -49,6 +49,8 @@ public class Gun : MonoBehaviour
 
     public GunData gunData;
 
+    public UIManager uiManager;
+
     public ParticleSystem muzzleEffect;
     public ParticleSystem shellEffect;
 
@@ -77,7 +79,8 @@ public class Gun : MonoBehaviour
         magAmmo = gunData.magCapacity;
         lastFireTime = 0f;
 
-        CurrentState = State.Ready;
+        CurrentState = State.Ready; 
+        uiManager.SetAmmoText(magAmmo, ammoRemain);
     }
 
     private void Update()
@@ -158,6 +161,8 @@ public class Gun : MonoBehaviour
             CurrentState = State.Empty;
         }
 
+        uiManager.SetAmmoText(magAmmo, ammoRemain);
+
     }
 
     public bool Reload()
@@ -170,6 +175,7 @@ public class Gun : MonoBehaviour
         StartCoroutine(CoReload());
 
         return true;
+        uiManager.SetAmmoText(magAmmo, ammoRemain);
     }
 
     IEnumerator CoReload()
@@ -195,5 +201,6 @@ public class Gun : MonoBehaviour
     public void AddAmmo(int amount)
     {
         ammoRemain = Mathf.Min(ammoRemain + amount, gunData.startAmmoRemain);
+        uiManager.SetAmmoText(magAmmo, ammoRemain);
     }
 }

@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 135478876175241966}
   - component: {fileID: 6452220189210036171}
   - component: {fileID: 2655725409237971670}
+  - component: {fileID: 1173659490565924955}
   m_Layer: 0
   m_Name: HealthPack
   m_TagString: Untagged
@@ -230,3 +231,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1173659490565924955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838412652947266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead2867b8c98b924c868ea7d37dce710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 2
+  value: 10

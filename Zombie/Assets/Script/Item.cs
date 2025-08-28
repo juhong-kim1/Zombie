@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IItem
 {
-
     public enum Types
     {
         Coin,
